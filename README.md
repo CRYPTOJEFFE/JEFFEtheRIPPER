@@ -1,3 +1,13 @@
+# JEFFEtheRIPPER — Ultimate workbench preview
+
+This fork now includes an offline recovery workbench and an authenticated single-team server in [ultimate/](ultimate/README.md). It provides private asset intake, versioned jobs, bounded John/Hashcat process adapters, a browser interface, redacted reports, and reviewed integration catalogs.
+
+The current application is version **0.1.0**. John has been synchronized to upstream commit `37bebbe4b6442c8dd3888e5848ef062c0783e9f3`. The 1,000-proposal tracker explicitly separates implemented, partial, alternative, and deferred work; this preview does not implement all 1,000 proposals. See [implementation evidence](ultimate/reports/) and [setup and limitations](ultimate/README.md).
+
+John the Ripper remains the Openwall engine described below. Existing copyrights, credits and component licenses are preserved. The newly requested exploit/network/AI repositories are cataloged with review decisions, not automatically installed or executed.
+
+---
+
 [![Circle CI](https://circleci.com/gh/openwall/john/tree/bleeding-jumbo.svg?style=shield)](https://circleci.com/gh/openwall/john/tree/bleeding-jumbo)
 [![Downloads](https://img.shields.io/badge/Download-Windows%20Build-blue.svg)](https://github.com/openwall/john-packages/releases)
 [![License](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](https://github.com/openwall/john/blob/bleeding-jumbo/doc/LICENSE)
