@@ -7,7 +7,7 @@
 
 j=-j`nproc` || j=
 type sudo >/dev/null 2>&1 && sudo=sudo || sudo=
-common_packages='make libssl-dev libpcap-dev'
+common_packages='make libcrypt-dev libssl-dev libpcap-dev'
 
 retry_if_failed()
 {
@@ -78,7 +78,7 @@ case "$CC" in
 		esac
 		;;
 	clang*)
-		apt_get_install $packages "$CC" yasm
+		apt_get_install $packages "$CC"
 		;;
 	*)
 		apt_get_install $packages

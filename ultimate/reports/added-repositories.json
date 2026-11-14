@@ -1,0 +1,491 @@
+[
+  {
+    "url": "https://github.com/openbestof/awesome-ai",
+    "repo": "openbestof/awesome-ai",
+    "available": true,
+    "description": "A curated list of awesome AI tools, frameworks, api, software and resources.",
+    "head_sha": "f6ac565464d75d3828370b26e912fb769cb02896",
+    "license": "Not declared in GitHub metadata",
+    "observations": [
+      "The default-branch root lists only readme.md; it is a curated resource list rather than an executable application.",
+      "Inspected the opening 95 README lines, including API, cloud, backend, and chat-interface categories.",
+      "GitHub metadata reports no license; repository content should not be vendored without clarifying rights.",
+      "Several resource links use older repository owners, so each selected downstream project needs independent verification."
+    ],
+    "decision": "reference-only",
+    "reason": "Include a source link in the discovery catalog. Do not import the entire list as dependencies or copy unlicensed text; select specific AI components only after separate review.",
+    "sources": [
+      "https://api.github.com/repos/openbestof/awesome-ai",
+      "https://github.com/openbestof/awesome-ai/blob/f6ac565464d75d3828370b26e912fb769cb02896/readme.md"
+    ],
+    "reviewed_at": "2026-11-14",
+    "execution_performed": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/Z4nzu/hackingtool",
+    "repo": "Z4nzu/hackingtool",
+    "available": true,
+    "description": "ALL IN ONE Hacking Tool For Hackers",
+    "head_sha": "c3a858990f1f772e5c59f10c51f1a7aeb888ef23",
+    "license": "MIT",
+    "observations": [
+      "README describes an AI-guided console with 219 tools across 21 categories; these counts are project claims, not independently tested.",
+      "Categories include password recovery alongside phishing, payload creation, post-exploitation, DDoS and wireless tools.",
+      "README describes list-form subprocesses, verified downloads, an SBOM and per-step confirmation; implementation was not audited here.",
+      "The tool is a broad launcher, while JEFFE's implemented product scope is local offline recovery."
+    ],
+    "decision": "reference-only",
+    "reason": "Retain discoverability and architecture references. Use direct reviewed recovery-engine adapters rather than importing a broad attack launcher or its installers.",
+    "sources": [
+      "https://api.github.com/repos/Z4nzu/hackingtool",
+      "https://github.com/Z4nzu/hackingtool/blob/c3a858990f1f772e5c59f10c51f1a7aeb888ef23/README.md"
+    ],
+    "reviewed_at": "2026-11-14",
+    "execution_performed": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/mishakorzik/AllHackingTools",
+    "repo": "mishakorzik/AllHackingTools",
+    "available": true,
+    "description": " All-in-One Hacking Tools For Hackers! And more hacking tools! For termux.",
+    "head_sha": "def693c66c49519225b3010c72a674cc24f4487c",
+    "license": "GPL-3.0",
+    "observations": [
+      "README describes a Termux-focused installer and console that downloads many penetration-testing tools.",
+      "Installation changes packages and Termux storage access and includes optional ngrok configuration.",
+      "Its menu includes RATs, phishing, DDoS, social-media brute-force, wireless and hash-cracking tools.",
+      "GitHub metadata identifies GPL-3.0; dependencies have independent licenses."
+    ],
+    "decision": "reference-only",
+    "reason": "Catalog the project as a Termux toolbox reference. Its broad environment-mutating installer is not a suitable dependency of a reproducible offline recovery workbench.",
+    "sources": [
+      "https://api.github.com/repos/mishakorzik/AllHackingTools",
+      "https://github.com/mishakorzik/AllHackingTools/blob/def693c66c49519225b3010c72a674cc24f4487c/README.md"
+    ],
+    "reviewed_at": "2026-11-14",
+    "execution_performed": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/mrprogrammer2938/Black-Tool",
+    "repo": "mrprogrammer2938/Black-Tool",
+    "available": true,
+    "description": "Install the tools and start  Attacking , black-tool v5.5.5 ! \u2b1b",
+    "head_sha": "466ed29478a58eb41d58575d45b9d922c403e16b",
+    "license": "MIT",
+    "observations": [
+      "README presents an installer/launcher rather than a password-recovery engine.",
+      "Listed categories include malware, camera phishing, network password attacks, DoS and wireless attacks.",
+      "Installation invokes a shell script and then a Python launcher; those scripts were not executed.",
+      "GitHub metadata identifies MIT for this repository, not necessarily every linked third-party tool."
+    ],
+    "decision": "reference-only",
+    "reason": "Retain a descriptive catalog entry. Do not wire its malware/phishing/attack launcher into the recovery workbench; direct engine adapters offer a narrower testable interface.",
+    "sources": [
+      "https://api.github.com/repos/mrprogrammer2938/Black-Tool",
+      "https://github.com/mrprogrammer2938/Black-Tool/blob/466ed29478a58eb41d58575d45b9d922c403e16b/README.md"
+    ],
+    "reviewed_at": "2026-11-14",
+    "execution_performed": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/MichaelDim02/Narthex",
+    "repo": "MichaelDim02/Narthex",
+    "available": true,
+    "description": "Modular personalized dictionary generator.",
+    "head_sha": "38ea128712da6fd102284318094b79df86c6efde",
+    "license": "GPL-3.0",
+    "observations": [
+      "README describes nine small Unix-style C/shell dictionary-transformation tools communicating through text streams.",
+      "The project's wizard requests target information; that profiling flow is outside the chosen recovery-product scope.",
+      "Generic transformations could apply to an explicitly user-supplied recovery vocabulary, but John already offers overlapping rules.",
+      "The README claims a four-keyword example expands to more than two million entries, highlighting the need for output limits.",
+      "GitHub metadata reports GPL-3.0; README wording also references GPLv3+, requiring exact file-level review before reuse."
+    ],
+    "decision": "needs-review",
+    "reason": "Potential optional local subprocess integration for user-supplied vocabularies only. Benchmark value versus existing John rules, review source/license, and enforce bounded output before enabling; no integration was executed.",
+    "sources": [
+      "https://api.github.com/repos/MichaelDim02/Narthex",
+      "https://github.com/MichaelDim02/Narthex/blob/38ea128712da6fd102284318094b79df86c6efde/README.md"
+    ],
+    "reviewed_at": "2026-11-14",
+    "execution_performed": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/t3l3machus/CVE-2023-22960",
+    "repo": "t3l3machus/CVE-2023-22960",
+    "available": true,
+    "description": "This vulnerability allows an attacker to bypass the credentials brute-force prevention mechanism of the Embedded Web Server (interface) of more than 60 Lexmark printer models. This issue affects both username-password and PIN authentication.",
+    "head_sha": "c3f6dba73a7a57b6dff1e2ea428a84dec566d7a5",
+    "license": "MIT",
+    "observations": [
+      "The user listed this identical repository twice; it is one unique catalog entry.",
+      "README identifies a Lexmark Embedded Web Server brute-force prevention bypass affecting username/password and PIN authentication.",
+      "README links the Lexmark security advisory and describes testing on three printer models.",
+      "This is a live authentication-control bypass PoC, not an offline recovery engine."
+    ],
+    "decision": "reference-only",
+    "reason": "Keep the CVE and advisory as defensive reference metadata. Do not implement login brute-force or bypass orchestration in an offline recovery workbench.",
+    "sources": [
+      "https://api.github.com/repos/t3l3machus/CVE-2023-22960",
+      "https://github.com/t3l3machus/CVE-2023-22960/blob/c3f6dba73a7a57b6dff1e2ea428a84dec566d7a5/README.md"
+    ],
+    "reviewed_at": "2026-11-14",
+    "execution_performed": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/MAXZL1/hackingtool-plugin",
+    "repo": "MAXZL1/hackingtool-plugin",
+    "available": true,
+    "description": "Integrate 183 pentesting and OSINT tools into Claude Code to execute security tasks via local backends or Docker containers.",
+    "head_sha": "b5e8c5a5b81064ffe3d2cf59e2fdf8fa8dea09b3",
+    "license": "Not declared in GitHub metadata",
+    "observations": [
+      "README claims a Claude Code wrapper around 183 tools using native Bash, WSL or Docker.",
+      "Many unrelated project and screenshot links point to the same ZIP under this repository instead of their claimed destinations.",
+      "README installation instructions name AKCODEZ/hackingtool-plugin while the supplied repository is MAXZL1/hackingtool-plugin.",
+      "README advertises retrying commands with elevated privileges after permission failures.",
+      "GitHub metadata returns no license, and the inspected root has no LICENSE file.",
+      "No ZIP, executable, plugin skill or installation script was downloaded or run; these observations do not establish malware."
+    ],
+    "decision": "needs-review",
+    "reason": "Retain only reference metadata pending origin, license and payload verification. Link inconsistencies and advertised automatic privilege escalation make automatic installation inappropriate.",
+    "sources": [
+      "https://api.github.com/repos/MAXZL1/hackingtool-plugin",
+      "https://github.com/MAXZL1/hackingtool-plugin/blob/b5e8c5a5b81064ffe3d2cf59e2fdf8fa8dea09b3/README.md"
+    ],
+    "reviewed_at": "2026-11-14",
+    "execution_performed": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/ajuremesh/PDFPasswordUnlocker",
+    "repo": "ajuremesh/PDFPasswordUnlocker",
+    "available": true,
+    "description": "This project offers a straightforward solution for retrieving forgotten PDF passwords using Google Colab. With just five simple steps, it efficiently handles passwords of any complexity. Say goodbye to PDF access hurdles and hello to seamless password recovery.",
+    "head_sha": "7fb19e2a4ac8b900d230ec8d16e571ac3bd044f0",
+    "license": "GPL-3.0 (GitHub metadata; repository LICENSE present)",
+    "observations": [
+      "The repository contains a Colab notebook, README and GPL license, rather than a reusable packaged recovery service.",
+      "Notebook attempts actual PDF password verification with pikepdf.open; this is candidate-based recovery, not merely removal of PDF permission flags or decryption using an already-known password.",
+      "The generator stores every candidate in an in-memory list and writes passwordlist.txt; the verifier prints attempted and recovered plaintext passwords.",
+      "README requires uploading the PDF to Google Colab and makes broad compatibility claims that were not independently validated."
+    ],
+    "decision": "reference-only",
+    "reason": "Use as a workflow reference only. Prefer a local, independently reviewed PDF library or John's existing PDF converter; do not execute the Colab notebook or inherit its unbounded candidate memory, secret printing, or universal-recovery claims.",
+    "sources": [
+      "https://api.github.com/repos/ajuremesh/PDFPasswordUnlocker",
+      "https://github.com/ajuremesh/PDFPasswordUnlocker/blob/7fb19e2a4ac8b900d230ec8d16e571ac3bd044f0/README.md",
+      "https://github.com/ajuremesh/PDFPasswordUnlocker/blob/7fb19e2a4ac8b900d230ec8d16e571ac3bd044f0/PDF_Password_Retriever_by_Ajumon_Remesan.ipynb",
+      "https://github.com/ajuremesh/PDFPasswordUnlocker/blob/7fb19e2a4ac8b900d230ec8d16e571ac3bd044f0/LICENSE"
+    ],
+    "reviewed_at": "2026-11-14",
+    "validation": "Read-only metadata, README, tree, and selected source inspection; not installed, executed, or benchmarked.",
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/usethisname1419/PDFCrack",
+    "repo": "usethisname1419/PDFCrack",
+    "available": true,
+    "description": "PDF Crack is a GUI tool used for cracking pdf passwords. includes 3 cracking options",
+    "head_sha": "f8a47d56a66e19bdb4149eccbd7d6c701d478aa8",
+    "license": "No root license; lth-pdfcrack/README.md states 'Internal LTH tool. All rights reserved.'",
+    "observations": [
+      "Repository contains a Python GUI and a Go implementation with PDF parsing, candidate checking and optional OpenCL source.",
+      "Go README documents PDF revisions R2-R4; R5/R6 support is described as planned.",
+      "The README's speedup figures (up to 47x/100x) are upstream claims, not benchmark results from this review.",
+      "The nested README explicitly reserves rights and no top-level LICENSE was found in the inspected tree."
+    ],
+    "decision": "reference-only",
+    "reason": "Do not copy or redistribute its source without permission. Record the feature reference, but rely on licensed existing engines for local PDF recovery.",
+    "sources": [
+      "https://api.github.com/repos/usethisname1419/PDFCrack",
+      "https://github.com/usethisname1419/PDFCrack/blob/f8a47d56a66e19bdb4149eccbd7d6c701d478aa8/README.md",
+      "https://github.com/usethisname1419/PDFCrack/blob/f8a47d56a66e19bdb4149eccbd7d6c701d478aa8/lth-pdfcrack/README.md"
+    ],
+    "reviewed_at": "2026-11-14",
+    "validation": "Read-only metadata, README, tree, and selected source inspection; not installed, executed, or benchmarked.",
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/4lch3mis7/xml-hydra",
+    "repo": "4lch3mis7/xml-hydra",
+    "available": true,
+    "description": "XML-Hydra is a tool to bruteforce user passwords via public facing XML-RPC interface in a Wordpress application.",
+    "head_sha": "359234f881e8918fb1b0ce79ea3be1f2c9c61bf8",
+    "license": "MIT (GitHub metadata; LICENSE present)",
+    "observations": [
+      "README describes online WordPress XML-RPC password brute force, including concurrency and proxy-list controls.",
+      "It targets a live service rather than a user-supplied local encrypted file or offline verifier."
+    ],
+    "decision": "reference-only",
+    "reason": "Does not fit the local offline recovery execution boundary; preserve a descriptive catalog entry without an execution adapter.",
+    "sources": [
+      "https://api.github.com/repos/4lch3mis7/xml-hydra",
+      "https://github.com/4lch3mis7/xml-hydra/blob/359234f881e8918fb1b0ce79ea3be1f2c9c61bf8/README.md"
+    ],
+    "reviewed_at": "2026-11-14",
+    "validation": "Read-only metadata, README, tree, and selected source inspection; not installed, executed, or benchmarked.",
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/Spinmoodiness1112/HackSmarter_Swarm",
+    "repo": "Spinmoodiness1112/HackSmarter_Swarm",
+    "available": true,
+    "description": "Automate reconnaissance and vulnerability assessment tasks using a multi-agent AI system built with LangGraph and Gemini for security professionals.",
+    "head_sha": "847ebb5c9b110491a9b8c8cdf23b1d69717b1907",
+    "license": "No license identified in GitHub metadata or inspected repository tree",
+    "observations": [
+      "README describes AI-assisted live reconnaissance and vulnerability assessment, rather than offline document recovery.",
+      "Selected tools.py source includes wrappers for network enumeration, vulnerability scanning, online password checking and a breached-data lookup service.",
+      "The README's download/release links point to a ZIP under tests and recommend an antivirus exception; artifact provenance was not verified and the archive was not downloaded or executed.",
+      "The inspected tree includes Python source and tests, but no LICENSE."
+    ],
+    "decision": "reference-only",
+    "reason": "Do not add an autonomous network-testing agent or unverified binary to the offline workbench. Keep metadata for research; any future reuse needs license clarification and artifact/source review.",
+    "sources": [
+      "https://api.github.com/repos/Spinmoodiness1112/HackSmarter_Swarm",
+      "https://github.com/Spinmoodiness1112/HackSmarter_Swarm/blob/847ebb5c9b110491a9b8c8cdf23b1d69717b1907/README.md",
+      "https://github.com/Spinmoodiness1112/HackSmarter_Swarm/blob/847ebb5c9b110491a9b8c8cdf23b1d69717b1907/tools.py",
+      "https://github.com/Spinmoodiness1112/HackSmarter_Swarm/blob/847ebb5c9b110491a9b8c8cdf23b1d69717b1907/requirements.txt"
+    ],
+    "reviewed_at": "2026-11-14",
+    "validation": "Read-only metadata, README, tree, and selected source inspection; not installed, executed, or benchmarked.",
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/aniket2912/Internal-Network-Penetration-testing",
+    "repo": "aniket2912/Internal-Network-Penetration-testing",
+    "available": true,
+    "description": "\ud83d\udd12 Internal Network Penetration Testing \u2013 A complete module covering methodologies, attack vectors, tools, and hands-on labs to assess and exploit security weaknesses within internal networks.",
+    "head_sha": "7cbdef9412f3d72de201a59041193fbd092ed25c",
+    "license": "No license identified in GitHub metadata or inspected repository tree",
+    "observations": [
+      "The tree contains a README, PDF, and image archives; it is training material rather than an integration library.",
+      "README covers internal network assessment, exploitation, privilege escalation, credential extraction, persistence and exfiltration as well as reporting.",
+      "No executable recovery backend or reusable library interface was established by this inspection."
+    ],
+    "decision": "reference-only",
+    "reason": "Catalog as external learning material only. It supplies no compatible offline recovery component, and absent licensing prevents copying the material into the product.",
+    "sources": [
+      "https://api.github.com/repos/aniket2912/Internal-Network-Penetration-testing",
+      "https://github.com/aniket2912/Internal-Network-Penetration-testing/blob/7cbdef9412f3d72de201a59041193fbd092ed25c/README.md"
+    ],
+    "reviewed_at": "2026-11-14",
+    "validation": "Read-only metadata, README, tree, and selected source inspection; not installed, executed, or benchmarked.",
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/the-hollowclan/ZipCracker",
+    "repo": "the-hollowclan/ZipCracker",
+    "available": true,
+    "description": "A 100% free standalone ZIP password recovery tool",
+    "head_sha": "9e63a25cf4bd921f4f03b97854e1cbeb1fd4d537",
+    "license": "Hollow Clan License v1.0; prohibits commercial gain, sale and sublicensing",
+    "observations": [
+      "README describes a Qt ZIP password-recovery GUI and custom engine.",
+      "The inspected repository tree contains only README.md, LICENSE and screenshot.png; no engine or GUI source is present.",
+      "LICENSE permits attributed noncommercial modification/sharing but prohibits commercial gain and sublicensing.",
+      "No working implementation, performance claim, or supported ZIP encryption variant was independently validated."
+    ],
+    "decision": "reference-only",
+    "reason": "There is no visible engine source to combine, and the noncommercial license is unsuitable for unrestricted redistribution with a GPL workbench. Use existing licensed ZIP recovery support.",
+    "sources": [
+      "https://api.github.com/repos/the-hollowclan/ZipCracker",
+      "https://github.com/the-hollowclan/ZipCracker/blob/9e63a25cf4bd921f4f03b97854e1cbeb1fd4d537/README.md",
+      "https://github.com/the-hollowclan/ZipCracker/blob/9e63a25cf4bd921f4f03b97854e1cbeb1fd4d537/LICENSE"
+    ],
+    "reviewed_at": "2026-11-14",
+    "validation": "Read-only metadata, README, tree, and selected source inspection; not installed, executed, or benchmarked.",
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/verygoodsecbadsec/crackbox",
+    "repo": "verygoodsecbadsec/crackbox",
+    "available": true,
+    "description": "\ud83d\udd10\u2694\ufe0fWhere hashcat, john, hydra & netexec become one. Built for real engagements \u2014 hash cracking, password spraying, pitchfork brute-forcing, JWT attacks. Lockout-aware. Credential-safe. Because great pentesters don't juggle tools, they own the workflow.",
+    "head_sha": "4182adbd641da84e04e6bfde97ae1b73f141237b",
+    "license": "LICENSE contains Apache-2.0; README incorrectly claims MIT",
+    "observations": [
+      "The toolkit combines offline John/Hashcat workflows with online password spraying, Hydra brute force and JWT-secret testing.",
+      "Selected source uses argument lists for subprocess execution; this alone does not establish complete security or prevent all option-handling mistakes.",
+      "README licensing conflicts with the actual LICENSE file.",
+      "No code was executed and its redaction, cleanup, lockout handling and compatibility claims were not runtime-verified."
+    ],
+    "decision": "reference-only",
+    "reason": "Retain as a UI/workflow reference and independently implement the narrow local engine interface. Do not import its live credential-attack modules; resolve license documentation before any future code reuse.",
+    "sources": [
+      "https://api.github.com/repos/verygoodsecbadsec/crackbox",
+      "https://github.com/verygoodsecbadsec/crackbox/blob/4182adbd641da84e04e6bfde97ae1b73f141237b/README.md",
+      "https://github.com/verygoodsecbadsec/crackbox/blob/4182adbd641da84e04e6bfde97ae1b73f141237b/LICENSE",
+      "https://github.com/verygoodsecbadsec/crackbox/blob/4182adbd641da84e04e6bfde97ae1b73f141237b/crackbox.py"
+    ],
+    "reviewed_at": "2026-11-14",
+    "validation": "Read-only metadata, README, tree, and selected source inspection; not installed, executed, or benchmarked.",
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/amibhai/credential-attacks-toolkit",
+    "repo": "amibhai/credential-attacks-toolkit",
+    "available": true,
+    "description": "Complete credential attack suite for authorized security testing \u2014 SSH, FTP, Web Login, Bruteforce, Dictionary attacks",
+    "head_sha": "855c2ca23b680c4d2c545e14f7ae0989f4c8ce19",
+    "license": "GPL-3.0",
+    "observations": [
+      "The README describes live authentication testing across SSH, FTP, HTTP, SMB and other network services, including multi-target campaigns and proxy rotation.",
+      "README capability and test-count claims were not executed or independently validated.",
+      "GitHub reports a last push on 2026-08-15; the inspected head is a GPL v3 license addition."
+    ],
+    "decision": "reference-only",
+    "reason": "Live-service credential testing is outside the local offline recovery workbench. Retain a source link and review record; do not import its attack, spraying, proxy, or targeting execution paths.",
+    "sources": [
+      "https://api.github.com/repos/amibhai/credential-attacks-toolkit",
+      "https://github.com/amibhai/credential-attacks-toolkit/blob/855c2ca23b680c4d2c545e14f7ae0989f4c8ce19/README.md",
+      "https://github.com/amibhai/credential-attacks-toolkit/blob/855c2ca23b680c4d2c545e14f7ae0989f4c8ce19/LICENSE"
+    ],
+    "reviewed_at": "2026-11-14",
+    "license_evidence": "GitHub metadata classification; full file-level licensing and dependencies require review before redistribution",
+    "last_push": "2026-08-15T12:39:53Z",
+    "archived": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/Brunux/AirScript-FE",
+    "repo": "Brunux/AirScript-FE",
+    "available": true,
+    "description": "AirScript-FE its a SCRIPT/FE/GUI for the aircrack-ng written in ruby/Gtk+. It allows you to crack WEP/WPA wifi encryption keys. Pretty easy to use and handy",
+    "head_sha": "9b56f2df2cf3f61c295db902c185ae5c9ac8826e",
+    "license": "GPL-2.0",
+    "observations": [
+      "The README identifies a Ruby/Gtk+ frontend to Aircrack-ng for WEP/WPA Wi-Fi keys.",
+      "The root tree contains a Ruby UI and shell script; compatibility with current Ruby, GTK or Aircrack-ng was not tested.",
+      "GitHub reports its last push on 2015-04-14."
+    ],
+    "decision": "reference-only",
+    "reason": "Historical wireless UI reference with substantial age and platform compatibility concerns; it does not provide the modern desktop/job architecture needed for the offline file-recovery product.",
+    "sources": [
+      "https://api.github.com/repos/Brunux/AirScript-FE",
+      "https://github.com/Brunux/AirScript-FE/blob/9b56f2df2cf3f61c295db902c185ae5c9ac8826e/README.md",
+      "https://github.com/Brunux/AirScript-FE/blob/9b56f2df2cf3f61c295db902c185ae5c9ac8826e/LICENSE"
+    ],
+    "reviewed_at": "2026-11-14",
+    "license_evidence": "GitHub metadata classification; full file-level licensing and dependencies require review before redistribution",
+    "last_push": "2015-04-14T15:53:54Z",
+    "archived": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/jedivind/aircrack-ng-iphone",
+    "repo": "jedivind/aircrack-ng-iphone",
+    "available": true,
+    "description": "Aircrack-ng suite for jailbraoken iPhone/iPod Touch. Includes Wi-Fi key cracking, Packet sniffing, Replay and fake authentication..",
+    "head_sha": "b4b0bd072367f7daefb5079008d0f5cabcd3d1c9",
+    "license": "GPL-2.0",
+    "observations": [
+      "Repository description targets jailbroken iPhone/iPod Touch and includes packet sniffing, replay and fake authentication.",
+      "The README adapts older Aircrack-ng Linux documentation and lists historical driver and platform issues.",
+      "GitHub reports its last push on 2012-05-24; modern iOS compatibility was not established."
+    ],
+    "decision": "reference-only",
+    "reason": "Legacy device-specific wireless port is not a suitable dependency for the current workbench. Keep historical provenance only; no capture, injection, or network execution integration.",
+    "sources": [
+      "https://api.github.com/repos/jedivind/aircrack-ng-iphone",
+      "https://github.com/jedivind/aircrack-ng-iphone/blob/b4b0bd072367f7daefb5079008d0f5cabcd3d1c9/README",
+      "https://github.com/jedivind/aircrack-ng-iphone/blob/b4b0bd072367f7daefb5079008d0f5cabcd3d1c9/LICENSE"
+    ],
+    "reviewed_at": "2026-11-14",
+    "license_evidence": "GitHub metadata classification; full file-level licensing and dependencies require review before redistribution",
+    "last_push": "2012-05-24T13:23:00Z",
+    "archived": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/lucthienphong1120/Aircrack-ng-handbook",
+    "repo": "lucthienphong1120/Aircrack-ng-handbook",
+    "available": true,
+    "description": "All in one - Everything useful about Aircrack-ng",
+    "head_sha": "a212e55f40aee3b60f696a0cccd883c82a5a32e6",
+    "license": "MPL-2.0",
+    "observations": [
+      "The root is a documentation collection covering setup, monitor mode, tools, WPA examples and Evil Twin topics.",
+      "The README links additional wireless auditing and reconnaissance projects.",
+      "GitHub reports its last push on 2023-04-05 and classifies the repository license as MPL-2.0."
+    ],
+    "decision": "reference-only",
+    "reason": "This is a handbook rather than an engine or library. Link as an external reference only; do not treat documentation as an executable integration or a dependency to install.",
+    "sources": [
+      "https://api.github.com/repos/lucthienphong1120/Aircrack-ng-handbook",
+      "https://github.com/lucthienphong1120/Aircrack-ng-handbook/blob/a212e55f40aee3b60f696a0cccd883c82a5a32e6/README.md",
+      "https://github.com/lucthienphong1120/Aircrack-ng-handbook/blob/a212e55f40aee3b60f696a0cccd883c82a5a32e6/LICENSE"
+    ],
+    "reviewed_at": "2026-11-14",
+    "license_evidence": "GitHub metadata classification; full file-level licensing and dependencies require review before redistribution",
+    "last_push": "2023-04-05T13:12:23Z",
+    "archived": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://github.com/uvt/aircrack-ng",
+    "repo": "uvt/aircrack-ng",
+    "available": true,
+    "description": "WiFi Crack",
+    "head_sha": "b6383050c4f79f8ded5bfbe9ecf393ab24773010",
+    "license": "GPL-2.0",
+    "observations": [
+      "The README describes an Aircrack-ng source tree for WEP/WPA-PSK recovery and ancillary wireless utilities.",
+      "The README lists old Cygwin/GCC and driver constraints; current-platform compatibility was not tested.",
+      "GitHub reports its last push on 2013-09-08 and does not mark this repository as a GitHub fork; code lineage was not independently compared."
+    ],
+    "decision": "reference-only",
+    "reason": "An old copy of a wireless suite is a poor maintained dependency choice. Keep a reference entry; any future offline capture-analysis requirement should separately evaluate maintained upstream Aircrack-ng rather than adopting this copy.",
+    "sources": [
+      "https://api.github.com/repos/uvt/aircrack-ng",
+      "https://github.com/uvt/aircrack-ng/blob/b6383050c4f79f8ded5bfbe9ecf393ab24773010/README.md",
+      "https://github.com/uvt/aircrack-ng/blob/b6383050c4f79f8ded5bfbe9ecf393ab24773010/LICENSE"
+    ],
+    "reviewed_at": "2026-11-14",
+    "license_evidence": "GitHub metadata classification; full file-level licensing and dependencies require review before redistribution",
+    "last_push": "2013-09-08T01:04:28Z",
+    "archived": false,
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://gitlab.com/CRYPTOJEFFE/el-jeffes-exploits-shellcode-ghdb/-/import",
+    "repo": "CRYPTOJEFFE/el-jeffes-exploits-shellcode-ghdb",
+    "available": false,
+    "description": "Supplied GitLab import page",
+    "head_sha": null,
+    "license": null,
+    "observations": [
+      "The supplied /-/import URL redirects to GitLab sign-in; repository contents and import status could not be inspected."
+    ],
+    "decision": "unavailable",
+    "reason": "An import-management URL is not usable source content. Retained as an unverified reference; no code imported.",
+    "sources": [
+      "https://gitlab.com/CRYPTOJEFFE/el-jeffes-exploits-shellcode-ghdb/-/import"
+    ],
+    "requested_in": "second request"
+  },
+  {
+    "url": "https://awesome-repositories.com/f/awesome-lists/ai/artificial-intelligence",
+    "repo": "awesome-repositories AI directory",
+    "available": true,
+    "description": "Directory of AI and machine-learning repositories",
+    "head_sha": null,
+    "license": null,
+    "observations": [
+      "Lists projects including Ollama, PyTorch, and TensorFlow; directory descriptions are third-party summaries, not API compatibility evidence."
+    ],
+    "decision": "reference-only",
+    "reason": "Discovery catalog rather than a software component. Retained as a reference; no model or agent runtime installed.",
+    "sources": [
+      "https://awesome-repositories.com/f/awesome-lists/ai/artificial-intelligence"
+    ],
+    "requested_in": "second request"
+  }
+]

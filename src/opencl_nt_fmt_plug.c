@@ -57,7 +57,7 @@ john_register_one(&fmt_opencl_NT_long);
 #define BENCHMARK_COMMENT   ""
 #define BENCHMARK_LENGTH    0x107
 #define PLAINTEXT_LENGTH    27
-#define PLAINTEXT_LEN_LONG  125 /* 59, 91, 123, 125 are supported */
+#define PLAINTEXT_LEN_LONG  125 /* 59, 91, 123, 125, and maybe 127 are supported */
 /* At most 3 bytes of UTF-8 needed per character */
 #define UTF8_MAX_LENGTH     MIN(125, 3 * utf16len)
 #define BUFSIZE             ((UTF8_MAX_LENGTH + 3) / 4 * 4)
@@ -635,10 +635,6 @@ static int crypt_all(int *pcount, struct db_salt *salt)
 	// copy keys to the device
 	if (key_idx)
 		BENCH_CLERROR(clEnqueueWriteBuffer(queue[gpu_id], buffer_keys, CL_FALSE, key_offset, 4 * key_idx - key_offset, saved_plain + key_offset / 4, 0, NULL, multi_profilingEvent[0]), "failed in clEnqueueWriteBuffer buffer_keys.");
-
-	/* Safety for when count < GWS */
-	for (int i = count; i <= gws; i++)
-		saved_idx[i] = key_idx;
 
 	BENCH_CLERROR(clEnqueueWriteBuffer(queue[gpu_id], buffer_idx, CL_FALSE, idx_offset, 4 * gws - idx_offset, saved_idx + idx_offset / 4, 0, NULL, multi_profilingEvent[1]), "failed in clEnqueueWriteBuffer buffer_idx.");
 

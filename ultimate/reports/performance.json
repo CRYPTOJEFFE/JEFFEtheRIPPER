@@ -1,0 +1,188 @@
+{
+  "before": {
+    "measured_at_utc": "2026-11-14T14:45:42.123105+00:00",
+    "environment": {
+      "python": "3.12.14",
+      "sqlite": "3.53.1",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "logical_cpus": 5,
+      "allowed_cpus": 5,
+      "timer": "time.perf_counter_ns",
+      "storage_sha256": "923d8052ee9668dda94e4dcc669716e675786002ded35299bfde14422f118664"
+    },
+    "dataset": {
+      "rows": 100000,
+      "seed": "deterministic-v1",
+      "jobs_per_timestamp": 50,
+      "notes": "Synthetic metadata inserted directly; this fixture measures reads, not job creation or event journaling.",
+      "sha256": "4be3edd1db9dcae630e3115590d19519c9ba253ec0674f31233e8e6b19777145"
+    },
+    "warmup_calls_per_method": 3,
+    "repeats": 13,
+    "plans": {
+      "summary_status_group": [
+        "SCAN jobs",
+        "USE TEMP B-TREE FOR GROUP BY"
+      ],
+      "newest_100_jobs": [
+        "SCAN jobs USING INDEX jobs_created",
+        "USE TEMP B-TREE FOR LAST TERM OF ORDER BY"
+      ]
+    },
+    "indexes": [
+      {
+        "name": "jobs_created",
+        "sql": "CREATE INDEX jobs_created ON jobs(created_at DESC)"
+      },
+      {
+        "name": "sqlite_autoindex_jobs_1",
+        "sql": null
+      }
+    ],
+    "samples_ms": {
+      "report_summary": [
+        32.012624,
+        31.618503,
+        27.213747,
+        28.620955,
+        28.98988,
+        29.472838,
+        31.384738,
+        28.004735,
+        28.828083,
+        33.019518,
+        29.750517,
+        28.878259,
+        27.892515
+      ],
+      "newest_100_jobs": [
+        0.868558,
+        0.896304,
+        0.844907,
+        0.854698,
+        1.011518,
+        0.791526,
+        0.920769,
+        0.867145,
+        0.958719,
+        0.916925,
+        0.985589,
+        0.953284,
+        0.86963
+      ]
+    },
+    "median_ms": {
+      "report_summary": 28.98988,
+      "newest_100_jobs": 0.896304
+    }
+  },
+  "caveats": [
+    "Warm-cache, single-machine measurements on synthetic metadata; not password recovery or GPU throughput.",
+    "Real Workspace methods include a new SQLite connection per call in both phases; setup, index creation and integrity scans are excluded.",
+    "Each trial measures both methods, alternating order; baseline and optimized phases are sequential, not randomized across code versions.",
+    "Indexes consume storage and add write/update work; write throughput and other deployments were not benchmarked.",
+    "No wall-time thresholds are asserted by the functional tests; shared-host noise can affect samples.",
+    "A 100-row benchmark harness smoke run was also retained separately; sub-millisecond timings varied and showed no universal improvement for small datasets."
+  ],
+  "comparison": {
+    "report_summary": {
+      "before_median_ms": 28.98988,
+      "after_median_ms": 4.979751,
+      "speedup_ratio": 5.821552121782796,
+      "median_latency_reduction_percent": 82.82245045512433
+    },
+    "newest_100_jobs": {
+      "before_median_ms": 0.896304,
+      "after_median_ms": 0.83854,
+      "speedup_ratio": 1.0688863977866292,
+      "median_latency_reduction_percent": 6.44468840928971
+    }
+  },
+  "after": {
+    "measured_at_utc": "2026-11-14T14:46:20.398865+00:00",
+    "environment": {
+      "python": "3.12.14",
+      "sqlite": "3.53.1",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "logical_cpus": 5,
+      "allowed_cpus": 5,
+      "timer": "time.perf_counter_ns",
+      "storage_sha256": "6f4a2a1a4d0a06c23e148754e0817172a5cf6a876c9a419faf9039dc1fd8e707"
+    },
+    "dataset": {
+      "rows": 100000,
+      "seed": "deterministic-v1",
+      "jobs_per_timestamp": 50,
+      "notes": "Synthetic metadata inserted directly; this fixture measures reads, not job creation or event journaling.",
+      "sha256": "4be3edd1db9dcae630e3115590d19519c9ba253ec0674f31233e8e6b19777145"
+    },
+    "warmup_calls_per_method": 3,
+    "repeats": 13,
+    "plans": {
+      "summary_status_group": [
+        "SCAN jobs USING COVERING INDEX jobs_status"
+      ],
+      "newest_100_jobs": [
+        "SCAN jobs USING INDEX jobs_created_id"
+      ]
+    },
+    "indexes": [
+      {
+        "name": "jobs_created_id",
+        "sql": "CREATE INDEX jobs_created_id ON jobs(created_at DESC, id DESC)"
+      },
+      {
+        "name": "jobs_status",
+        "sql": "CREATE INDEX jobs_status ON jobs(status)"
+      },
+      {
+        "name": "sqlite_autoindex_jobs_1",
+        "sql": null
+      }
+    ],
+    "samples_ms": {
+      "report_summary": [
+        4.736102,
+        4.74358,
+        4.979751,
+        5.214493,
+        5.08819,
+        6.097557,
+        5.346817,
+        5.117309,
+        5.813861,
+        4.59867,
+        4.841924,
+        4.547225,
+        4.689662
+      ],
+      "newest_100_jobs": [
+        0.875257,
+        0.83854,
+        0.788476,
+        0.795409,
+        0.966413,
+        0.937684,
+        0.769014,
+        0.7873,
+        0.889297,
+        0.763962,
+        0.797888,
+        0.849991,
+        0.961634
+      ]
+    },
+    "median_ms": {
+      "report_summary": 4.979751,
+      "newest_100_jobs": 0.83854
+    }
+  },
+  "optimization": {
+    "summary": "Added covering jobs(status) index to avoid scanning spec payloads and temporary GROUP BY sorting.",
+    "newest_jobs": "Replaced jobs(created_at DESC) with jobs(created_at DESC,id DESC) to eliminate ordering ties sort.",
+    "initial_experiment": "Baseline timed original storage implementation; after timed changed storage implementation on the identical 100,000-job dataset.",
+    "reproduction": "benchmark_storage.py can reconstruct original and optimized index layouts on a dedicated synthetic workspace using the current query methods."
+  }
+}

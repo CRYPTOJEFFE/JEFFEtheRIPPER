@@ -1,0 +1,25 @@
+{
+  "version": "0.1.0",
+  "python": "3.12.14",
+  "platform": "linux",
+  "engines": {
+    "john": {
+      "exit_code": 0,
+      "elapsed_seconds": 0.026164,
+      "timed_out": false,
+      "interrupted": false,
+      "output_limit_reached": false,
+      "log_write_failed": false,
+      "log_bytes": 1095,
+      "engine": "john",
+      "executable": "/workspace/JEFFEtheRIPPER/run/john",
+      "sha256": "d0604cdcb3cbd589eab82f72d652c3e23a6620a63dabe08f8b5a31939238b186",
+      "available": true,
+      "build_info": "Version: 1.9.0-jumbo-1+bleeding-37bebbe4b6 2026-11-04 19:16:47 +0100\nBuild: linux-gnu 64-bit x86_64 AVX-512 AC OMP\nSIMD: AVX-512, interleaving: MD4:3 MD5:3 SHA1:1 SHA256:1 SHA512:1\nAES hardware acceleration: AES-NI\nCPU tests: AVX512(BW+VL+DQ)\n$JOHN is /workspace/JEFFEtheRIPPER/run/\nFormat interface version: 14\nMax. number of reported tunable costs: 4\nRec file version: REC4, charset file version: CHR3\nCHARSET_MIN: 1 (0x01), CHARSET_MAX: 255 (0xff), CHARSET_LENGTH: 24\nSALT_HASH_SIZE: 1048576\nSINGLE_IDX_MAX: 32768, SINGLE_BUF_MAX: 4294967295\nEffective limit: Max. KPC 32768\nMarkov mode max. level: 400, length 30\ngcc version: 14.2.0\nGNU libc version: 2.41 (loaded: 2.41)\nCrypto library: OpenSSL 3.5.7 9 Jun 2026\nGMP library version: 6.3.0\nFile locking: fcntl()\nfseek(): fseek, ftell(): ftell, fopen(): fopen, memmem(): System's\ntimes(2) sysconf(_SC_CLK_TCK) is 100\nUsing times(2) for timers, resolution 10 ms\nHR timer: clock_gettime(), latency 45 ns\nTotal physical host memory: 18007 MiB\nAvailable physical host memory: 17256 MiB\nTerminal locale string: C.UTF-8\nParsed terminal locale: UTF-8\n"
+    },
+    "hashcat": {
+      "available": false,
+      "reason": "not configured"
+    }
+  }
+}

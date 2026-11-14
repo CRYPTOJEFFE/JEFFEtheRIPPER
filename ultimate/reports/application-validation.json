@@ -1,0 +1,9 @@
+{
+  "application_tests": 71,
+  "elapsed_seconds": 17.347,
+  "passed": true,
+  "command": "JEFFE_TEST_JOHN=/workspace/JEFFEtheRIPPER/run/john OMP_NUM_THREADS=2 python -m unittest discover -s tests -v",
+  "environment": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "native_tests_enabled": true,
+  "note": "Loopback socket tests ran outside the restrictive command sandbox. Tests used synthetic data."
+}

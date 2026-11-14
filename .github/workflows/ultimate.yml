@@ -1,0 +1,49 @@
+name: Ultimate workbench
+on:
+  push:
+    paths: ['ultimate/**', '.github/workflows/ultimate.yml']
+  pull_request:
+    paths: ['ultimate/**', '.github/workflows/ultimate.yml']
+permissions:
+  contents: read
+concurrency:
+  group: ultimate-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  application:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ['3.10', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Application and loopback HTTP tests
+        working-directory: ultimate
+        run: python -m unittest discover -s tests -v
+  native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build prerequisites
+        run: sudo apt-get update && sudo apt-get install -y libssl-dev libgmp-dev zlib1g-dev libbz2-dev pkg-config
+      - name: Build CPU engine
+        working-directory: src
+        run: ./configure --disable-opencl --disable-pcap && make -j2
+      - name: Native self-tests
+        env:
+          OMP_NUM_THREADS: '2'
+        run: run/john --test=0
+      - name: Real engine application integration
+        working-directory: ultimate
+        env:
+          OMP_NUM_THREADS: '2'
+          JEFFE_TEST_JOHN: ${{ github.workspace }}/run/john
+        run: python -m unittest discover -s tests -v

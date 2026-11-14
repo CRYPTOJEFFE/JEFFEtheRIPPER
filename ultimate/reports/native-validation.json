@@ -1,0 +1,132 @@
+{
+  "source_sha": "37bebbe4b6442c8dd3888e5848ef062c0783e9f3",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "configure": {
+    "command": [
+      "./configure",
+      "--disable-opencl",
+      "--disable-pcap"
+    ],
+    "exit_code": 0,
+    "log": "native-configure.log"
+  },
+  "build": {
+    "command": [
+      "make",
+      "-j2"
+    ],
+    "timeout_seconds": 600,
+    "status": "passed",
+    "log": "native-build.log",
+    "exit_code": 0
+  },
+  "features": {
+    "target": "x86_64 AVX-512",
+    "openmp": true,
+    "opencl": false,
+    "openssl": true,
+    "libgmp": true,
+    "zlib": true,
+    "libbz2": false,
+    "libpcap": false
+  },
+  "limitations": [
+    "Host-optimized AVX-512 binary, not a portable baseline release",
+    "GPU support and performance not tested",
+    "7z BZIP2 and GPG bzip2 support incomplete because libbz2 headers/libraries were not detected",
+    "No dependency installation performed"
+  ],
+  "tests": [
+    {
+      "name": "build-info",
+      "command": [
+        "/workspace/JEFFEtheRIPPER/run/john",
+        "--list=build-info"
+      ],
+      "environment": {
+        "OMP_NUM_THREADS": "2"
+      },
+      "timeout_seconds": 15,
+      "elapsed_seconds": 0.016,
+      "exit_code": 0,
+      "status": "passed",
+      "log": "native-build-info.log"
+    },
+    {
+      "name": "raw-sha256",
+      "command": [
+        "/workspace/JEFFEtheRIPPER/run/john",
+        "--test=0",
+        "--format=raw-sha256"
+      ],
+      "environment": {
+        "OMP_NUM_THREADS": "2"
+      },
+      "timeout_seconds": 45,
+      "elapsed_seconds": 0.315,
+      "exit_code": 0,
+      "status": "passed",
+      "log": "native-raw-sha256.log"
+    },
+    {
+      "name": "sha512crypt",
+      "command": [
+        "/workspace/JEFFEtheRIPPER/run/john",
+        "--test=0",
+        "--format=sha512crypt"
+      ],
+      "environment": {
+        "OMP_NUM_THREADS": "2"
+      },
+      "timeout_seconds": 45,
+      "elapsed_seconds": 0.917,
+      "exit_code": 0,
+      "status": "passed",
+      "log": "native-sha512crypt.log"
+    },
+    {
+      "name": "bcrypt",
+      "command": [
+        "/workspace/JEFFEtheRIPPER/run/john",
+        "--test=0",
+        "--format=bcrypt"
+      ],
+      "environment": {
+        "OMP_NUM_THREADS": "2"
+      },
+      "timeout_seconds": 45,
+      "elapsed_seconds": 0.268,
+      "exit_code": 0,
+      "status": "passed",
+      "log": "native-bcrypt.log"
+    },
+    {
+      "name": "full-selftest",
+      "command": [
+        "/workspace/JEFFEtheRIPPER/run/john",
+        "--test=0"
+      ],
+      "environment": {
+        "OMP_NUM_THREADS": "2"
+      },
+      "timeout_seconds": 180,
+      "elapsed_seconds": 97.649,
+      "exit_code": 0,
+      "status": "passed",
+      "passed_lines": 439,
+      "failed_lines": 0,
+      "log": "native-full-selftest.log",
+      "formats_passed": 439
+    }
+  ],
+  "binary": {
+    "path": "/workspace/JEFFEtheRIPPER/run/john",
+    "sha256": "d0604cdcb3cbd589eab82f72d652c3e23a6620a63dabe08f8b5a31939238b186"
+  },
+  "notes": [
+    "Full self-test final summary: All 439 formats passed self-tests",
+    "Huge pages were unavailable; John explicitly reported this as nonfatal",
+    "Self-test elapsed times are validation runtimes, not recovery-throughput benchmarks",
+    "Native source files were not changed; build products remain ignored by upstream git rules"
+  ]
+}

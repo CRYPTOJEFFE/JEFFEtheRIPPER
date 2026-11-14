@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "server": "Real TeamServer bound to loopback with temporary storage",
+  "data": "Synthetic users, files, 1000 planned tracker entries, and one reference-only catalog entry",
+  "engine_execution": false,
+  "browser": "156.0.8078.79",
+  "checks": [
+    "operator authentication",
+    "token field clearing",
+    "1000-row tracker",
+    "exact ID search",
+    "tracker pagination",
+    "hash import",
+    "wordlist import",
+    "queued job creation",
+    "enabled Start control",
+    "disconnect cleanup",
+    "viewer authentication and restrictions",
+    "no persistent token storage",
+    "390px mobile layout",
+    "no JavaScript errors"
+  ],
+  "screenshot": "team-dashboard-synthetic.png"
+}
